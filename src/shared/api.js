@@ -1,13 +1,5 @@
-// apis
-const apis = {
-  ces: {
-    development: 'http://localhost:3000',
-    production: 'https://collab-editor-backend.herokuapp.com',
-  },
-};
-
 export default async function api(apiName, path, method = undefined, body = undefined, options = []) {
-  const url = `${apis[apiName][process.env.NODE_ENV]}/${path}`;
+  const url = `https://collab-editor-backend.herokuapp.com/${path}`;
   const res = await fetch(
     url,
     Object.assign(
