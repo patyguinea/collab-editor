@@ -28,7 +28,7 @@ export default function ConversationIcons(props) {
   return (
     <div className={classes.icons}>
       {getIcons(props).map(({ title, icon, onClick }) => (
-        <Tooltip title={title}>
+        <Tooltip key={title} title={title}>
           <IconButton aria-label={title.toLowerCase()} onClick={() => onClick(props.id)}>
             {icon}
           </IconButton>
